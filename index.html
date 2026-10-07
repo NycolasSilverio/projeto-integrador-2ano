@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>GeoDiscover | Sua próxima aventura</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegação principal">
+      <a class="logo" href="#top">Geo<span>Discover</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#destinations">Destinos</a><a href="#experiences">Experiências</a><a href="#about">Sobre nós</a><a
+          href="#contact">Contato</a>
+      </div>
+      <div class="auth-actions">
+        <button class="profile-button" id="profile-button" type="button">Meu perfil</button>
+        <button class="login-button" id="login-button" type="button">Entrar</button>
+        <button class="signup-button" id="signup-button" type="button">Criar conta</button>
+      </div>
+    </nav>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="kicker">Viaje com intenção</div>
+        <h1>Descubra destinos que respiram história.</h1>
+        <p>Sua próxima aventura começa aqui. Explore lugares extraordinários e encontre experiências que ficam para
+          sempre.</p><button class="primary-button" id="explore-button">Explorar destinos</button>
+      </div>
+    </section>
+    <section class="search-panel" aria-label="Buscar destinos"><input id="search" type="search"
+        placeholder="Para onde você quer ir?" aria-label="Buscar por destino ou país" /><select id="climate"
+        aria-label="Filtrar por clima">
+        <option value="">Todos os climas</option>
+        <option value="tropical">Tropical</option>
+        <option value="temperado">Temperado</option>
+        <option value="deserto">Deserto</option>
+        <option value="ártico">Ártico</option>
+      </select></section>
+
+    <section class="section" id="destinations">
+      <div class="section-heading">
+        <div>
+          <div class="kicker">O mundo espera</div>
+          <h2>Destinos em destaque</h2>
+        </div>
+        <p>Explore os destinos mais procurados . Cada um oferece uma experiência única e
+          inesquecível.</p>
+      </div>
+      <div class="destination-grid" id="destination-grid"></div>
+    </section>
+  
+    <section class="section" id="about">
+      <div class="section-heading">
+        <div>
+          <div class="kicker">GeoDiscover</div>
+          <h2>Pronto para sua próxima aventura?</h2>
+        </div>
+        <p>Na GeoDiscover, acreditamos que cada viagem é uma oportunidade de descobrir algo novo.</p>
+      </div><button class="primary-button" id="journey-button">Começar jornada</button>
+    </section>
+
+    <section class="profile-section" id="profile">
+      <div class="profile-header">
+        <div>
+          <div class="kicker">Área do viajante</div>
+          <h2>Meu perfil</h2>
+        </div>
+        <div class="profile-header-actions">
+          <button class="profile-edit" id="profile-edit" type="button">Editar perfil</button>
+          <button class="profile-back" id="profile-back" type="button">Voltar aos destinos</button>
+        </div>
+      </div>
+      <div class="profile-layout">
+        <div class="profile-card">
+          <div class="profile-avatar" aria-hidden="true">AG</div>
+          <h3>Angell G.</h3>
+          <p>Viajante desde 2027</p>
+          <a href="mailto:angell@email.com">angell@email.com</a>
+          <div class="profile-stats">
+            <div><strong id="saved-count">2</strong><span>destinos salvos</span></div>
+            <div><strong>04</strong><span>viagens planejadas</span></div>
+          </div>
+        </div>
+        <div class="saved-trips">
+          <div class="saved-heading">
+            <h3>Destinos salvos</h3>
+            <button class="card-link" id="see-destinations" type="button">Explorar mais</button>
+          </div>
+          <div class="saved-grid" id="saved-grid"></div>
+          <div class="next-trip">
+            <span class="next-trip-label">Próxima viagem</span>
+            <strong>Rota pela Itália</strong>
+            <span>Roma, Florença e Veneza · Setembro de 2026</span>
+            <div class="trip-progress"><span></span></div>
+            <small>65% planejada</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-content">
+        <div>
+          <div class="kicker">Fale com a gente</div>
+          <h2>Vamos planejar algo inesquecível?</h2>
+          <p>Tem dúvidas ou quer uma sugestão personalizada? Nossa equipe está pronta para ajudar você a encontrar o próximo destino.</p>
+          <div class="contact-details">
+            <a href="mailto:ola@geodiscover.com"><strong>E-mail</strong><span>ola@geodiscover.com</span></a>
+            <a href="tel:+551140028922"><strong>Telefone</strong><span>+55 (11) 4002-8922</span></a>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="contact-name">Nome</label>
+              <input id="contact-name" name="name" type="text" placeholder="Seu nome" required />
+            </div>
+            <div class="form-field">
+              <label for="contact-email">E-mail</label>
+              <input id="contact-email" name="email" type="email" placeholder="voce@email.com" required />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="contact-subject">Assunto</label>
+            <select id="contact-subject" name="subject" required>
+              <option value="" selected disabled>Escolha um assunto</option>
+              <option>Dúvida sobre destinos</option>
+              <option>Planejamento de viagem</option>
+              <option>Parcerias</option>
+              <option>Outro assunto</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="contact-message">Mensagem</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="Conte como podemos ajudar" required></textarea>
+          </div>
+          <button class="primary-button" type="submit">Enviar mensagem</button>
+          <p class="contact-feedback" id="contact-feedback" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>© 2026 GeoDiscover. Viagens planejadas para quem entende de qualidade.</footer>
+  <div class="modal-backdrop" id="modal-backdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="close-modal"
+        id="close-modal" aria-label="Fechar">&times;</button>
+      <h2 id="modal-title">Destino</h2>
+      <p id="modal-text"></p><button class="primary-button"
+        onclick="document.getElementById('modal-backdrop').classList.remove('open')">Planejar viagem</button>
+    </div>
+  </div>
+  <div class="modal-backdrop" id="auth-backdrop" aria-hidden="true">
+    <div class="modal auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+      <button class="close-modal" id="close-auth-modal" type="button" aria-label="Fechar">&times;</button>
+      <div class="auth-kicker">Sua jornada começa aqui</div>
+      <h2 id="auth-title">Entrar na sua conta</h2>
+      <p class="auth-intro" id="auth-intro">Acesse seus destinos salvos e continue planejando.</p>
+      <div class="auth-tabs" role="tablist" aria-label="Acesso à conta">
+        <button class="auth-tab active" id="login-tab" type="button" role="tab" aria-selected="true">Entrar</button>
+        <button class="auth-tab" id="signup-tab" type="button" role="tab" aria-selected="false">Criar conta</button>
+      </div>
+      <form id="auth-form">
+        <div class="form-field signup-only" hidden>
+          <label for="name">Nome completo</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Como podemos chamar você?" />
+        </div>
+        <div class="form-field">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="voce@email.com" required />
+        </div>
+        <div class="form-field">
+          <label for="password">Senha</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Mínimo de 6 caracteres" minlength="6" required />
+        </div>
+        <div class="form-field signup-only" hidden>
+          <label for="confirm-password">Confirmar senha</label>
+          <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" placeholder="Digite a senha novamente" minlength="6" />
+        </div>
+        <button class="primary-button auth-submit" id="auth-submit" type="submit">Entrar</button>
+        <p class="form-message" id="form-message" role="status"></p>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
